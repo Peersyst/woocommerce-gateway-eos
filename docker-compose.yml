@@ -1,0 +1,33 @@
+version: '3.3'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - ./docker/db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    volumes:
+      - ./docker/wordpress_data:/var/www/html
+      - ./assets:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/assets
+      - ./includes:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/includes
+      - ./languages:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/languages
+      - ./gulpfile.js:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/gulpfile.js
+      - ./package.json:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/package.json
+      - ./readme.txt:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/readme.txt
+      - ./woocommerce-gateway-xem.php:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/woocommerce-gateway-xem.php
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress

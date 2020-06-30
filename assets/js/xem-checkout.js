@@ -39,7 +39,7 @@
                 });
 
                 /*Add copy functinality to amount, ref and nem address*/
-                if(Clipboard.isSupported()){
+                if(false && Clipboard.isSupported()){
                     new Clipboard('#xem-amount-wrapper');
                     new Clipboard('#xem-address-wrapper');
                     new Clipboard('#xem-ref-wrapper');
