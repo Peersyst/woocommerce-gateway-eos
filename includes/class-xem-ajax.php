@@ -90,7 +90,7 @@ class Xem_Ajax {
 	    $currency = "EUR";
 
 
-	    $callback = Xem_Currency::get_xem_amount($amount, $currency);
+	    $callback = Wax_Currency::get_wax_amount($amount, $currency);
 		if($callback){
 			self::send($callback);
 		}
@@ -120,7 +120,7 @@ class Xem_Ajax {
 		$amount = WC()->cart->total;
 		$currency = strtoupper( get_woocommerce_currency() );
 		//Todo: If too high difference becuase of price volatility, add notice to lock in new amount. The customer has probably waited to long.
-		$xem_amout = Xem_Currency::get_xem_amount($amount, $currency);
+		$xem_amout = Wax_Currency::get_wax_amount($amount, $currency);
 		$xem_amount_locked = WC()->session->get('xem_amount');
 		//Remove the currency
 		$xem_amount_locked = intval(str_replace('.', '', $xem_amount_locked));

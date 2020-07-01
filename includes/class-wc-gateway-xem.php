@@ -65,7 +65,7 @@ class WC_Gateway_Xem extends WC_Payment_Gateway {
      */
     public function payment_fields() {
         $user = wp_get_current_user();
-        $xem_amount = Xem_Currency::get_xem_amount($this->get_order_total(), strtoupper(get_woocommerce_currency()));
+        $xem_amount = Wax_Currency::get_wax_amount($this->get_order_total(), strtoupper(get_woocommerce_currency()));
 
         //Todo: Lock amount for 5 minutes
         WC()->session->set('xem_amount', $xem_amount);
