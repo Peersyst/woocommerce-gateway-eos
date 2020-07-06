@@ -1,14 +1,14 @@
 {
-  "name": "woocommerce-gateway-xem",
+  "name": "woocommerce-gateway-wax",
   "version": "1.0.0",
   "description": "A woocommeerce plguin.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Robin Pedersen",
+  "author": "Peersyst technologies",
   "license": "ISC",
-  "homepage": "https://github.com/RobertoSnap/",
+  "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.11.0",
     "del": "^2.2.2",
