@@ -35,7 +35,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
         $this->title = $this->get_option('title');
         $this->description = $this->get_option('description');
         $this->enabled = $this->get_option('enabled');
-        $this->wax = $this->get_option('wax_address');
+        $this->wax_address = $this->get_option('wax_address');
         $this->match_amount = 'yes' === $this->get_option('match_amount');
         $this->logging = 'yes' === $this->get_option('logging');
         $this->prices_in_wax = $this->get_option('prices_in_wax');

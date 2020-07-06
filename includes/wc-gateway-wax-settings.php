@@ -32,7 +32,7 @@ return apply_filters( 'wc_wax_settings',
 			'type'        => 'text',
 			'description' => __( 'Input the WAX address where you want customers to pay WAX too.', 'woocommerce-gateway-wax' ),
 			'default'     => '',
-			'placeholder' => 'NASLLJ-7P5TAU-2SBHNV-UJJ66Q-CQNZY2-IVRPTP-QOB2',
+			'placeholder' => 'cg2qw.wam',
 			'desc_tip'    => true,
 		),
 		'match_amount' => array(
