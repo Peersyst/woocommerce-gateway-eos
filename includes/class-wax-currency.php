@@ -43,6 +43,8 @@ class Wax_Currency {
 
         $callback['amount'] = $amount * $data["WAXP"];
 
+        // var_dump($callback['amount']);
+
         //Check if amount got set and round it.
         if (!empty($callback['amount']) && $callback['amount'] > 0)
             return round( $callback['amount'], 6, PHP_ROUND_HALF_UP );

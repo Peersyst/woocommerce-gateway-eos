@@ -19,13 +19,13 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./docker/wordpress_data:/var/www/html
-      - ./assets:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/assets
-      - ./includes:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/includes
-      - ./languages:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/languages
-      - ./gulpfile.js:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/gulpfile.js
-      - ./package.json:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/package.json
-      - ./readme.txt:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/readme.txt
-      - ./woocommerce-gateway-xem.php:/var/www/html/wp-content/plugins/woocommerce-gateway-xem/woocommerce-gateway-xem.php
+      - ./assets:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/assets
+      - ./includes:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes
+      - ./languages:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/languages
+      - ./gulpfile.js:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/gulpfile.js
+      - ./package.json:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/package.json
+      - ./readme.txt:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/readme.txt
+      - ./woocommerce-gateway-wax.php:/var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php
     ports:
       - "8000:80"
     environment:

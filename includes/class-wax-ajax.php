@@ -76,14 +76,17 @@ class Wax_Ajax {
                 // WC AJAX can be used for frontend ajax requests
                 \add_action('wc_ajax_' . $ajax_event, array(__CLASS__, $ajax_event));
             }
-        }
+		}
     }
 
     public static function get_wax_amount( ){
 	    \check_ajax_referer('woocommerce-wax', 'nounce');
 
 	    $amount = \sanitize_text_field($_REQUEST['amount']);
-	    $currency = \sanitize_text_field($_REQUEST['currency']);
+		$currency = \sanitize_text_field($_REQUEST['currency']);
+		
+		error_log($amount);
+		// var_dump($amount);
 
 	    $amount = WC()->cart->total;
 	    $currency = strtoupper( get_woocommerce_currency() ) ;
@@ -103,6 +106,8 @@ class Wax_Ajax {
 		//This token is user spesific and expires each day.
 		$ref_id = wp_create_nonce( "3h62h6u26h42h6i2462h6u4h624" );
 
+		// var_dump($ref_id);
+
 		//Get information from the Payment gateway
 		if(!class_exists('WC_Gateway_Wax')){
 			return error("Please setup WAX payment");
@@ -119,11 +124,12 @@ class Wax_Ajax {
 		$wax_amout = Wax_Currency::get_wax_amount($amount, $currency);
 		$wax_amount_locked = WC()->session->get('wax_amount');
 		//Remove the currency
-		$wax_amount_locked = intval(str_replace('.', '', $wax_amount_locked));
+		$wax_amount_locked = floatval($wax_amount_locked);
 		//Todo: If locked and new amount diff to much, we can call a refresh.
 
-		//Get latest transactions from NEW
+		//Get latest transactions
 		include_once ('class-wax-api.php');
+		// TODO: include api key as parameter (from plugin settings)
 		$transactions = WaxApi::get_latest_transactions($wax_address);
 
 		if(!$transactions){
@@ -133,15 +139,18 @@ class Wax_Ajax {
 		$message_amount_match = false;
 		$amount_match = false;
 		$matched_transaction = false;
-		$decimal_amount_precision = 0;
+		$decimal_amount_precision = 1;
 		foreach ($transactions as $key => $t){
-			$message = self::hex2str($t->action->data->memo);
+			$message = $t->action->data->memo;
+			error_log(print_r($message, true));
 			//Check for matching message
 			if( $ref_id === $message ){
 				$message_match = true;
 				//Check for matching, only need to check that its atleast
-                $wax_amount_lock_check = round($wax_amount_locked,$decimal_amount_precision);
-                $wax_amount_transaction_check = round($t->action->amount,$decimal_amount_precision);
+				$wax_amount_lock_check = round($wax_amount_locked,$decimal_amount_precision);
+				error_log(round($wax_amount_locked,$decimal_amount_precision));
+				error_log(round($t->amount,$decimal_amount_precision));
+                $wax_amount_transaction_check = round($t->amount,$decimal_amount_precision);
 				if( $wax_amount_lock_check <=  $wax_amount_transaction_check ){
 					$message_amount_match = true;
 					$matched_transaction = $t;
@@ -151,7 +160,7 @@ class Wax_Ajax {
 			//if we also do only match on amount we try it here, but then the amount must be axactly.
 			if(!$message_amount_match && $match_amount){
 				$wax_amount_lock_check = round($wax_amount_locked,$decimal_amount_precision);
-                $wax_amount_transaction_check = round($t->action->amount,$decimal_amount_precision);
+                $wax_amount_transaction_check = round($t->amount,$decimal_amount_precision);
 				if( $wax_amount_lock_check ===  $wax_amount_transaction_check ){
 					$amount_match = true;
 					$matched_transaction = $t;
@@ -160,6 +169,8 @@ class Wax_Ajax {
 			}
 
 		}
+
+		error_log(print_r($matched_transaction, true));
 
 		//Check if we found a matched transaction
 		//Then check that this transaction is not already connected to an order
@@ -187,7 +198,7 @@ class Wax_Ajax {
 			$wpdb->prepare( "
                 SELECT meta_key,meta_value FROM wp_postmeta
 		 		WHERE meta_key=\"wax_payment_hash\" AND meta_value= %s
-			", $matched_transaction->meta->hash->data
+			", $matched_transaction->id
 			), ARRAY_A
 		);
 

@@ -184,12 +184,12 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
 
         // Mark as on-hold (we're awaiting the cheque)
         $order->update_status('on-hold', __('Awaiting WAX payment', 'woocommerce'));
-        update_post_meta($order_id, 'wax_payment_hash', $wax_payment->meta->hash->data);
-        update_post_meta($order_id, 'wax_payment_ref', $this->hex2str($wax_payment->transaction->message->payload));
-        update_post_meta($order_id, 'wax_payment_amount', $wax_payment->transaction->amount);
-        update_post_meta($order_id, 'wax_payment_fee', $wax_payment->transaction->fee);
-        update_post_meta($order_id, 'wax_payment_height', $wax_payment->meta->height);
-        update_post_meta($order_id, 'wax_payment_recipient', $wax_payment->transaction->recipient);
+        update_post_meta($order_id, 'wax_payment_hash', $wax_payment->id);
+        update_post_meta($order_id, 'wax_payment_ref', $wax_payment->action->data->memo);
+        update_post_meta($order_id, 'wax_payment_amount', $wax_payment->amount);
+        update_post_meta($order_id, 'wax_payment_fee', 0);
+        update_post_meta($order_id, 'wax_payment_height', 0);
+        update_post_meta($order_id, 'wax_payment_recipient', $wax_payment->action->data->to);
 
         // Reduce stock levels
         $order->reduce_order_stock();
