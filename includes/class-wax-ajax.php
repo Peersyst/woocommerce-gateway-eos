@@ -115,6 +115,7 @@ class Wax_Ajax {
 
         $wax_options = get_option('woocommerce_wax_settings');
 		$wax_address = $wax_options['wax_address'];
+		$api_key = $wax_options['api_key'];
 		$match_amount = $wax_options['match_amount'];
 
 		//If we also want to do amount matching
@@ -129,8 +130,7 @@ class Wax_Ajax {
 
 		//Get latest transactions
 		include_once ('class-wax-api.php');
-		// TODO: include api key as parameter (from plugin settings)
-		$transactions = WaxApi::get_latest_transactions($wax_address);
+		$transactions = WaxApi::get_latest_transactions($wax_address, $api_key);
 
 		if(!$transactions){
 			self::error("No transactions from WAX");
@@ -142,14 +142,11 @@ class Wax_Ajax {
 		$decimal_amount_precision = 1;
 		foreach ($transactions as $key => $t){
 			$message = $t->action->data->memo;
-			error_log(print_r($message, true));
 			//Check for matching message
 			if( $ref_id === $message ){
 				$message_match = true;
 				//Check for matching, only need to check that its atleast
 				$wax_amount_lock_check = round($wax_amount_locked,$decimal_amount_precision);
-				error_log(round($wax_amount_locked,$decimal_amount_precision));
-				error_log(round($t->amount,$decimal_amount_precision));
                 $wax_amount_transaction_check = round($t->amount,$decimal_amount_precision);
 				if( $wax_amount_lock_check <=  $wax_amount_transaction_check ){
 					$message_amount_match = true;
@@ -170,7 +167,11 @@ class Wax_Ajax {
 
 		}
 
-		error_log(print_r($matched_transaction, true));
+		// if (self::not_used_wax_transaction($matched_transaction)) {
+		// 	error_log(print_r($matched_transaction, true));
+		// } else {
+		// 	error_log("transaction already used");
+		// }
 
 		//Check if we found a matched transaction
 		//Then check that this transaction is not already connected to an order

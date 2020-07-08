@@ -19,7 +19,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
     function __construct() {
         $this->id = 'wax';
         $this->method_title = __('WAX', 'woocommerce-gateway-wax');
-        $this->method_description = __('WAX works by showing a QR code and let customers pay WAX to your WAX wallet for orders in you shop.', 'woocommerce-gateway-wax');
+        $this->method_description = __('WAX works by letting clients pay WAX to your WAX wallet for orders in you shop.', 'woocommerce-gateway-wax');
         $this->has_fields = true;
         $this->icon = WC_WAX_PLUGIN_URL . ('/assets/img/pay_with_wax.png');
         $this->order_button_text = "Waiting for payment";
