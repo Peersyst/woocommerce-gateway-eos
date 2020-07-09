@@ -44,6 +44,7 @@ gulp.task('js', function(){
 		.pipe(sourcemaps.init())
 		.pipe(concat('wax-checkout.min.js'))
 		.pipe(gulp.dest('assets/js/'))
+		.pipe(uglify().on('error', console.error))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('maps/'))
 		.pipe(gulp.dest('assets/js/'));

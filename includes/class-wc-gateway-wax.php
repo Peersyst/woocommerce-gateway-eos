@@ -89,8 +89,8 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
         echo '</div>';
 
 
-        //QRcode
-        echo '<div id="wax-qr"></div>';
+        //QRcode TODO: button
+        echo '<div id="wax-qr"><button id="wax-pay-button">Pay</button></div>';
 
         echo '<div id="wax-payment-desc">';
 
@@ -124,7 +124,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
     /**
      * payment_scripts function.
      *
-     * Outputs scripts used for stripe payment
+     * Outputs scripts used for payment
      *
      * @access public
      */
@@ -132,6 +132,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
         $suffix = defined('SCRIPT_DEBUG') && SCRIPT_DEBUG ? '' : '.min';
 
         wp_enqueue_script('woocommerce_wax_qrcode', plugins_url('assets/js/qrcode' . $suffix . '.js', WC_WAX_MAIN_FILE), array( 'jquery' ), WC_WAX_VERSION, true);
+        wp_enqueue_script('waxjs', plugins_url('assets/js/waxjs' . $suffix . '.js', WC_WAX_MAIN_FILE), array( 'jquery' ), WC_WAX_VERSION, true);
         wp_enqueue_script('jquery-initialize', plugins_url('assets/js/jquery.initialize' . $suffix . '.js', WC_WAX_MAIN_FILE), array( 'jquery' ), WC_WAX_VERSION, true);
         wp_enqueue_script('clipboard', plugins_url('assets/js/clipboard' . $suffix . '.js', WC_WAX_MAIN_FILE), array( 'jquery' ), WC_WAX_VERSION, true);
         wp_enqueue_script('nanobar', plugins_url('assets/js/nanobar' . $suffix . '.js', WC_WAX_MAIN_FILE), array( 'jquery' ), WC_WAX_VERSION, true);

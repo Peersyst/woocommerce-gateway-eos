@@ -19,27 +19,34 @@
 
                 //Prepare NEM qr code data
                 // Invoice model for QR
-                this.paymentData = {
-                    "v": wc_wax_params.test ? 1 : 2,
-                    "type": 2,
-                    "data": {
-                        "addr": this.waxAddress.toUpperCase().replace(/-/g, ''),
-                        "amount": this.waxAmount * 1000000,
-                        "msg": this.waxRef,
-                        "name": "WAX payment to " + wc_wax_params.store
-                    }
-                };
+                // this.paymentData = {
+                //     "v": wc_wax_params.test ? 1 : 2,
+                //     "type": 2,
+                //     "data": {
+                //         "addr": this.waxAddress.toUpperCase().replace(/-/g, ''),
+                //         "amount": this.waxAmount * 1000000,
+                //         "msg": this.waxRef,
+                //         "name": "WAX payment to " + wc_wax_params.store
+                //     }
+                // };
                 //Generate the QR code with address
-                new QRCode("wax-qr", {
-                    text: JSON.stringify(this.paymentData),
-                    size: 256,
-                    fill: '#000',
-                    quiet: 0,
-                    ratio: 2
+                // new QRCode("wax-qr", {
+                //     text: JSON.stringify(this.paymentData),
+                //     size: 256,
+                //     fill: '#000',
+                //     quiet: 0,
+                //     ratio: 2
+                // });
+
+
+                // TODO: WAX payment button
+                $("#wax-pay-button").on('click', function(){
+                    // this.payWithWax(this.waxAddress, this.waxAmount, this.waxRef);
+                    alert("The paragraph was clicked.");
                 });
 
-                /*Add copy functinality to amount, ref and nem address*/
-                if(false && Clipboard.isSupported()){
+                /*Add copy functinality to amount, ref and wax address*/
+                if(Clipboard.isSupported()){
                     new Clipboard('#wax-amount-wrapper');
                     new Clipboard('#wax-address-wrapper');
                     new Clipboard('#wax-ref-wrapper');
@@ -55,7 +62,7 @@
                 /*Set pay button to disabled and start waiting for payments*/
                 $('.wc_payment_methods  > li').on( 'click', 'input[name="payment_method"]',function () {
                     if ( $( this ).is( '#payment_method_wax' ) ) {
-                        $( '#place_order' ).attr( 'disabled', true);
+                        $( '#place_order' ).attr( 'disabled', false);
                     }else{
                         $( '#place_order' ).attr( 'disabled', false)
                     }
@@ -72,6 +79,32 @@
 
 
         },
+        // payWithWax: function (receiver, amount, memo) {
+        //     var wax = new waxjs('https://wax.greymass.com', null, null, false);
+        //     wax.login().then(function () {
+        //         wax.api.transact({
+        //             actions: [{
+        //               account: 'eosio.token',
+        //               name: 'transfer',
+        //               authorization: [{
+        //                 actor: wax.userAccount,
+        //                 permission: 'active',
+        //               }],
+        //               data: {
+        //                 from: wax.userAccount,
+        //                 to: receiver,
+        //                 quantity: amount + ' WAX',
+        //                 memo: memo,
+        //               },
+        //             }],
+        //           }, {
+        //             blocksBehind: 3,
+        //             expireSeconds: 1200
+        //           }).then(function (result) {
+        //             // TODO: should lock the button, show feedback to tell the user the payment has been done -> wait for confirmation
+        //           });
+        //     });
+        // },
         updateWaxAmount: function () {
             this.ajaxGetWaxAmount().done(function (res) {
                 console.log(res);

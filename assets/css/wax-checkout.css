@@ -15,7 +15,7 @@
   clear: both;
   cursor: pointer; }
 
-/*Ads the icon after WAX amount for copy*/
+/*Ads the icon after NEM amount for copy*/
 #wax-amount-wrapper:after {
   content: url("../img/copy.png");
   padding-left: 5px; }
@@ -24,7 +24,7 @@
   clear: both;
   cursor: pointer; }
 
-/*Ads the icon after WAX address for copy*/
+/*Ads the icon after NEM address for copy*/
 #wax-address-wrapper:after {
   content: url("../img/copy.png");
   padding-left: 5px; }
@@ -33,7 +33,7 @@
   clear: both;
   cursor: pointer; }
 
-/*Ads the icon after WAX address for copy*/
+/*Ads the icon after NEM address for copy*/
 #wax-ref-wrapper:after {
   content: url("../img/copy.png");
   padding-left: 5px; }
