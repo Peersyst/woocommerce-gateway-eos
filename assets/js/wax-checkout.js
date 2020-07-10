@@ -17,33 +17,10 @@
                     this.process = '#wax-process';
                 }
 
-                //Prepare NEM qr code data
-                // Invoice model for QR
-                // this.paymentData = {
-                //     "v": wc_wax_params.test ? 1 : 2,
-                //     "type": 2,
-                //     "data": {
-                //         "addr": this.waxAddress.toUpperCase().replace(/-/g, ''),
-                //         "amount": this.waxAmount * 1000000,
-                //         "msg": this.waxRef,
-                //         "name": "WAX payment to " + wc_wax_params.store
-                //     }
-                // };
-                //Generate the QR code with address
-                // new QRCode("wax-qr", {
-                //     text: JSON.stringify(this.paymentData),
-                //     size: 256,
-                //     fill: '#000',
-                //     quiet: 0,
-                //     ratio: 2
-                // });
-
-
                 // TODO: WAX payment button
                 $("#wax-pay-button").on('click', function(){
-                    // this.payWithWax(this.waxAddress, this.waxAmount, this.waxRef);
-                    alert("The paragraph was clicked.");
-                });
+                    waxPayment.payWithWax(this.waxAddress, this.waxAmount, this.waxRef);
+                }.bind(this));
 
                 /*Add copy functinality to amount, ref and wax address*/
                 // if(Clipboard.isSupported()){
@@ -80,8 +57,8 @@
 
         },
         payWithWax: function (receiver, amount, memo) {
-            var wax = new waxjs('https://wax.greymass.com', null, null, false);
-            wax.login().then(function () {
+            var wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false);
+            wax.login().then(function (ret) {
                 wax.api.transact({
                     actions: [{
                       account: 'eosio.token',
@@ -93,7 +70,7 @@
                       data: {
                         from: wax.userAccount,
                         to: receiver,
-                        quantity: amount + ' WAX',
+                        quantity: amount.toFixed(8) + ' WAX',
                         memo: memo,
                       },
                     }],
@@ -101,9 +78,17 @@
                     blocksBehind: 3,
                     expireSeconds: 1200
                   }).then(function (result) {
+                    // contains the transaction id
+                    console.log("transaction result ->", result);
                     // TODO: should lock the button, show feedback to tell the user the payment has been done -> wait for confirmation
+                    waxPayment.showPendingToConfirm();
+                  }).catch(function () {
+                    // User rejected the transaction 
                   });
             });
+        },
+        showPendingToConfirm: function () {
+            // TODO:
         },
         updateWaxAmount: function () {
             this.ajaxGetWaxAmount().done(function (res) {
