@@ -46,11 +46,11 @@
                 });
 
                 /*Add copy functinality to amount, ref and wax address*/
-                if(Clipboard.isSupported()){
-                    new Clipboard('#wax-amount-wrapper');
-                    new Clipboard('#wax-address-wrapper');
-                    new Clipboard('#wax-ref-wrapper');
-                }
+                // if(Clipboard.isSupported()){
+                //     new Clipboard('#wax-amount-wrapper');
+                //     new Clipboard('#wax-address-wrapper');
+                //     new Clipboard('#wax-ref-wrapper');
+                // }
 
                 //Set payment button to disabled if whole chech is updated.
                 if($( 'div.payment_box.payment_method_wax' ).is(':visible')){
@@ -79,32 +79,32 @@
 
 
         },
-        // payWithWax: function (receiver, amount, memo) {
-        //     var wax = new waxjs('https://wax.greymass.com', null, null, false);
-        //     wax.login().then(function () {
-        //         wax.api.transact({
-        //             actions: [{
-        //               account: 'eosio.token',
-        //               name: 'transfer',
-        //               authorization: [{
-        //                 actor: wax.userAccount,
-        //                 permission: 'active',
-        //               }],
-        //               data: {
-        //                 from: wax.userAccount,
-        //                 to: receiver,
-        //                 quantity: amount + ' WAX',
-        //                 memo: memo,
-        //               },
-        //             }],
-        //           }, {
-        //             blocksBehind: 3,
-        //             expireSeconds: 1200
-        //           }).then(function (result) {
-        //             // TODO: should lock the button, show feedback to tell the user the payment has been done -> wait for confirmation
-        //           });
-        //     });
-        // },
+        payWithWax: function (receiver, amount, memo) {
+            var wax = new waxjs('https://wax.greymass.com', null, null, false);
+            wax.login().then(function () {
+                wax.api.transact({
+                    actions: [{
+                      account: 'eosio.token',
+                      name: 'transfer',
+                      authorization: [{
+                        actor: wax.userAccount,
+                        permission: 'active',
+                      }],
+                      data: {
+                        from: wax.userAccount,
+                        to: receiver,
+                        quantity: amount + ' WAX',
+                        memo: memo,
+                      },
+                    }],
+                  }, {
+                    blocksBehind: 3,
+                    expireSeconds: 1200
+                  }).then(function (result) {
+                    // TODO: should lock the button, show feedback to tell the user the payment has been done -> wait for confirmation
+                  });
+            });
+        },
         updateWaxAmount: function () {
             this.ajaxGetWaxAmount().done(function (res) {
                 console.log(res);
