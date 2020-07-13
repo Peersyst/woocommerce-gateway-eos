@@ -82,9 +82,10 @@
                     console.log("transaction result ->", result);
                     // TODO: should lock the button, show feedback to tell the user the payment has been done -> wait for confirmation
                     waxPayment.showPendingToConfirm();
-                  }).catch(function () {
-                    // User rejected the transaction 
                   });
+            }).catch(function (e) {
+                console.error(e);
+              // User rejected the transaction 
             });
         },
         showPendingToConfirm: function () {

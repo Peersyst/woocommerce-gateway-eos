@@ -1,0 +1,118 @@
+2020-07-07T09:14:24+00:00 CRITICAL syntax error, unexpected '}', expecting ';' in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 29
+
+2020-07-07T09:17:06+00:00 CRITICAL syntax error, unexpected 'if' (T_IF) in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 28
+
+2020-07-07T09:18:02+00:00 CRITICAL syntax error, unexpected '}', expecting ';' in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 29
+
+2020-07-07T09:19:56+00:00 CRITICAL syntax error, unexpected '}', expecting ';' in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 29
+
+2020-07-07T09:22:05+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(130): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:25:41+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:32:07+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:33:42+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:35:04+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:40:31+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:41:26+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(132): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T09:55:31+00:00 CRITICAL Uncaught Error: Call to undefined function get_latest_100_transactions() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:76
+Stack trace:
+#0 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(133): WaxApi::get_latest_transactions('..4qw.wam')
+#1 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#2 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#3 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#4 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#5 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 76
+
+2020-07-07T10:11:33+00:00 CRITICAL syntax error, unexpected '$path' (T_VARIABLE) in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 41
+
+2020-07-07T10:51:55+00:00 CRITICAL Uncaught Error: Call to undefined function get_amount() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:92
+Stack trace:
+#0 [internal function]: WaxApi::{closure}(Object(stdClass))
+#1 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php(94): array_map(Object(Closure), Array)
+#2 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php(102): WaxApi::transform_transactions(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(133): WaxApi::get_latest_transactions('..4qw.wam')
+#4 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#8 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 92
+
+2020-07-07T10:52:47+00:00 CRITICAL Uncaught Error: Call to undefined function get_amount() in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php:92
+Stack trace:
+#0 [internal function]: WaxApi::{closure}(Object(stdClass))
+#1 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php(94): array_map(Object(Closure), Array)
+#2 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php(102): WaxApi::transform_transactions(Array)
+#3 /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php(133): WaxApi::get_latest_transactions('..4qw.wam')
+#4 /var/www/html/wp-includes/class-wp-hook.php(287): Wax_Ajax::check_for_payment('')
+#5 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#6 /var/www/html/wp-includes/plugin.php(478): WP_Hook->do_action(Array)
+#7 /var/www/html/wp-admin/admin-ajax.php(175): do_action('wp_ajax_woocomm...')
+#8 {main}
+  thrown in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-api.php on line 92
+
+2020-07-07T11:26:22+00:00 CRITICAL syntax error, unexpected ')' in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wc-gateway-wax.php on line 188
+

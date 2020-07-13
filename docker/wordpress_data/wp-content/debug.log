@@ -1,0 +1,525 @@
+[10-Jul-2020 09:01:18 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[10-Jul-2020 09:01:18 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:18 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 09:01:18 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 09:01:18 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 09:01:18 UTC] PHP   4. do_action() /var/www/html/wp-includes/template-loader.php:13
+[10-Jul-2020 09:01:18 UTC] PHP   5. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP   6. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP   7. WC_AJAX::do_wc_ajax() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:89
+[10-Jul-2020 09:01:18 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP  11. WC_AJAX::update_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  12. woocommerce_order_review() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:361
+[10-Jul-2020 09:01:18 UTC] PHP  13. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[10-Jul-2020 09:01:18 UTC] PHP  14. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 09:01:18 UTC] PHP  15. wc_cart_totals_order_total_html() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:104
+[10-Jul-2020 09:01:18 UTC] PHP  16. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php:326
+[10-Jul-2020 09:01:18 UTC] PHP  17. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 09:01:18 UTC] PHP  18. WC_Wax->wax_change_cart_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  19. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:153
+[10-Jul-2020 09:01:18 UTC] PHP  20. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[10-Jul-2020 09:01:18 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 09:01:18 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:18 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 09:01:18 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 09:01:18 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 09:01:18 UTC] PHP   4. do_action() /var/www/html/wp-includes/template-loader.php:13
+[10-Jul-2020 09:01:18 UTC] PHP   5. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP   6. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP   7. WC_AJAX::do_wc_ajax() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:89
+[10-Jul-2020 09:01:18 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP  11. WC_AJAX::update_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  12. woocommerce_order_review() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:361
+[10-Jul-2020 09:01:18 UTC] PHP  13. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[10-Jul-2020 09:01:18 UTC] PHP  14. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 09:01:18 UTC] PHP  15. wc_cart_totals_order_total_html() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:104
+[10-Jul-2020 09:01:18 UTC] PHP  16. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php:326
+[10-Jul-2020 09:01:18 UTC] PHP  17. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 09:01:18 UTC] PHP  18. WC_Wax->wax_change_cart_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  19. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:153
+[10-Jul-2020 09:01:18 UTC] PHP  20. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[10-Jul-2020 09:01:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 09:01:18 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:18 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 09:01:18 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 09:01:18 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 09:01:18 UTC] PHP   4. do_action() /var/www/html/wp-includes/template-loader.php:13
+[10-Jul-2020 09:01:18 UTC] PHP   5. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP   6. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP   7. WC_AJAX::do_wc_ajax() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:89
+[10-Jul-2020 09:01:18 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP  11. WC_AJAX::update_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  12. woocommerce_order_review() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:361
+[10-Jul-2020 09:01:18 UTC] PHP  13. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[10-Jul-2020 09:01:18 UTC] PHP  14. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 09:01:18 UTC] PHP  15. wc_cart_totals_order_total_html() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:104
+[10-Jul-2020 09:01:18 UTC] PHP  16. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php:326
+[10-Jul-2020 09:01:18 UTC] PHP  17. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 09:01:18 UTC] PHP  18. WC_Wax->wax_change_cart_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  19. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:153
+[10-Jul-2020 09:01:18 UTC] PHP  20. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[10-Jul-2020 09:01:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[10-Jul-2020 09:01:18 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:18 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 09:01:18 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 09:01:18 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 09:01:18 UTC] PHP   4. do_action() /var/www/html/wp-includes/template-loader.php:13
+[10-Jul-2020 09:01:18 UTC] PHP   5. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP   6. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP   7. WC_AJAX::do_wc_ajax() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:89
+[10-Jul-2020 09:01:18 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP  11. WC_AJAX::update_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  12. woocommerce_order_review() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:361
+[10-Jul-2020 09:01:18 UTC] PHP  13. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[10-Jul-2020 09:01:18 UTC] PHP  14. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 09:01:18 UTC] PHP  15. wc_cart_totals_order_total_html() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:104
+[10-Jul-2020 09:01:18 UTC] PHP  16. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php:326
+[10-Jul-2020 09:01:18 UTC] PHP  17. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 09:01:18 UTC] PHP  18. WC_Wax->wax_change_cart_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  19. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:153
+[10-Jul-2020 09:01:18 UTC] PHP  20. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[10-Jul-2020 09:01:18 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[10-Jul-2020 09:01:18 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:18 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 09:01:18 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 09:01:18 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 09:01:18 UTC] PHP   4. do_action() /var/www/html/wp-includes/template-loader.php:13
+[10-Jul-2020 09:01:18 UTC] PHP   5. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP   6. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP   7. WC_AJAX::do_wc_ajax() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:89
+[10-Jul-2020 09:01:18 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:18 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:18 UTC] PHP  11. WC_AJAX::update_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  12. woocommerce_order_review() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-ajax.php:361
+[10-Jul-2020 09:01:18 UTC] PHP  13. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[10-Jul-2020 09:01:18 UTC] PHP  14. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 09:01:18 UTC] PHP  15. wc_cart_totals_order_total_html() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:104
+[10-Jul-2020 09:01:18 UTC] PHP  16. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/wc-cart-functions.php:326
+[10-Jul-2020 09:01:18 UTC] PHP  17. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 09:01:18 UTC] PHP  18. WC_Wax->wax_change_cart_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:18 UTC] PHP  19. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:153
+[10-Jul-2020 09:01:18 UTC] PHP  20. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[10-Jul-2020 09:01:21 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[10-Jul-2020 09:01:21 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:21 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 09:01:21 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 09:01:21 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:21 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:21 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:21 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 09:01:21 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 09:01:21 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:21 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 09:01:21 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 09:01:21 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:21 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:21 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:21 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 09:01:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 09:01:21 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:21 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 09:01:21 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 09:01:21 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:21 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:21 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:21 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 09:01:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[10-Jul-2020 09:01:21 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:21 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 09:01:21 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 09:01:21 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:21 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:21 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:21 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 09:01:21 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[10-Jul-2020 09:01:21 UTC] PHP Stack trace:
+[10-Jul-2020 09:01:21 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 09:01:21 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 09:01:21 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 09:01:21 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 09:01:21 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 09:01:21 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 09:05:51 UTC] The WC_Order::reduce_order_stock function is deprecated since version 3.0. Replace with wc_reduce_stock_levels.
+[10-Jul-2020 12:06:11 UTC] PHP Notice:  price was called <strong>incorrectly</strong>. Product properties should not be accessed directly. Backtrace: require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/plugins/woocommerce/templates/archive-product.php'), wc_get_template_part, load_template, require('/plugins/woocommerce/templates/content-product.php'), do_action('woocommerce_after_shop_loop_item_title'), WP_Hook->do_action, WP_Hook->apply_filters, woocommerce_template_loop_price, wc_get_template, include('/plugins/woocommerce/templates/loop/price.php'), WC_Product->get_price_html, apply_filters('woocommerce_get_price_html'), WP_Hook->apply_filters, WC_Wax->wax_change_product_price, WC_Abstract_Legacy_Product->__get, wc_doing_it_wrong Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.0.) in /var/www/html/wp-includes/functions.php on line 5167
+[10-Jul-2020 12:06:11 UTC] PHP Stack trace:
+[10-Jul-2020 12:06:11 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 12:06:11 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 12:06:11 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 12:06:11 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[10-Jul-2020 12:06:11 UTC] PHP   5. wc_get_template_part() /var/www/html/wp-content/plugins/woocommerce/templates/archive-product.php:70
+[10-Jul-2020 12:06:11 UTC] PHP   6. load_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:197
+[10-Jul-2020 12:06:11 UTC] PHP   7. require() /var/www/html/wp-includes/template.php:725
+[10-Jul-2020 12:06:11 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php:57
+[10-Jul-2020 12:06:11 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:06:11 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:06:11 UTC] PHP  11. woocommerce_template_loop_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:06:11 UTC] PHP  12. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1288
+[10-Jul-2020 12:06:11 UTC] PHP  13. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 12:06:11 UTC] PHP  14. WC_Product_Simple->get_price_html() /var/www/html/wp-content/plugins/woocommerce/templates/loop/price.php:25
+[10-Jul-2020 12:06:11 UTC] PHP  15. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php:1767
+[10-Jul-2020 12:06:11 UTC] PHP  16. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 12:06:11 UTC] PHP  17. WC_Wax->wax_change_product_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:06:11 UTC] PHP  18. WC_Product_Simple->__get() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:162
+[10-Jul-2020 12:06:11 UTC] PHP  19. wc_doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-product.php:72
+[10-Jul-2020 12:06:11 UTC] PHP  20. _doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:118
+[10-Jul-2020 12:06:11 UTC] PHP  21. trigger_error() /var/www/html/wp-includes/functions.php:5167
+[10-Jul-2020 12:06:24 UTC] PHP Notice:  price was called <strong>incorrectly</strong>. Product properties should not be accessed directly. Backtrace: require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/plugins/woocommerce/templates/archive-product.php'), wc_get_template_part, load_template, require('/plugins/woocommerce/templates/content-product.php'), do_action('woocommerce_after_shop_loop_item_title'), WP_Hook->do_action, WP_Hook->apply_filters, woocommerce_template_loop_price, wc_get_template, include('/plugins/woocommerce/templates/loop/price.php'), WC_Product->get_price_html, apply_filters('woocommerce_get_price_html'), WP_Hook->apply_filters, WC_Wax->wax_change_product_price, WC_Abstract_Legacy_Product->__get, wc_doing_it_wrong Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.0.) in /var/www/html/wp-includes/functions.php on line 5167
+[10-Jul-2020 12:06:24 UTC] PHP Stack trace:
+[10-Jul-2020 12:06:24 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[10-Jul-2020 12:06:24 UTC] PHP   2. require() /var/www/html/index.php:17
+[10-Jul-2020 12:06:24 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[10-Jul-2020 12:06:24 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[10-Jul-2020 12:06:24 UTC] PHP   5. wc_get_template_part() /var/www/html/wp-content/plugins/woocommerce/templates/archive-product.php:70
+[10-Jul-2020 12:06:24 UTC] PHP   6. load_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:197
+[10-Jul-2020 12:06:24 UTC] PHP   7. require() /var/www/html/wp-includes/template.php:725
+[10-Jul-2020 12:06:24 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php:57
+[10-Jul-2020 12:06:24 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:06:24 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:06:24 UTC] PHP  11. woocommerce_template_loop_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:06:24 UTC] PHP  12. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1288
+[10-Jul-2020 12:06:24 UTC] PHP  13. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[10-Jul-2020 12:06:24 UTC] PHP  14. WC_Product_Simple->get_price_html() /var/www/html/wp-content/plugins/woocommerce/templates/loop/price.php:25
+[10-Jul-2020 12:06:24 UTC] PHP  15. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php:1767
+[10-Jul-2020 12:06:24 UTC] PHP  16. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[10-Jul-2020 12:06:24 UTC] PHP  17. WC_Wax->wax_change_product_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:06:24 UTC] PHP  18. WC_Product_Simple->__get() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:162
+[10-Jul-2020 12:06:24 UTC] PHP  19. wc_doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-product.php:72
+[10-Jul-2020 12:06:24 UTC] PHP  20. _doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:118
+[10-Jul-2020 12:06:24 UTC] PHP  21. trigger_error() /var/www/html/wp-includes/functions.php:5167
+[10-Jul-2020 12:10:00 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[10-Jul-2020 12:10:00 UTC] PHP Stack trace:
+[10-Jul-2020 12:10:00 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 12:10:00 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 12:10:00 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:10:00 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:10:00 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:10:00 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 12:10:00 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 12:10:00 UTC] PHP Stack trace:
+[10-Jul-2020 12:10:00 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 12:10:00 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 12:10:00 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:10:00 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:10:00 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:10:00 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 12:10:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[10-Jul-2020 12:10:00 UTC] PHP Stack trace:
+[10-Jul-2020 12:10:00 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 12:10:00 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 12:10:00 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:10:00 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:10:00 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:10:00 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 12:10:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[10-Jul-2020 12:10:00 UTC] PHP Stack trace:
+[10-Jul-2020 12:10:00 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 12:10:00 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 12:10:00 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:10:00 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:10:00 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:10:00 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[10-Jul-2020 12:10:00 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[10-Jul-2020 12:10:00 UTC] PHP Stack trace:
+[10-Jul-2020 12:10:00 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[10-Jul-2020 12:10:00 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[10-Jul-2020 12:10:00 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[10-Jul-2020 12:10:00 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[10-Jul-2020 12:10:00 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[10-Jul-2020 12:10:00 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:45:45 UTC] PHP Notice:  price was called <strong>incorrectly</strong>. Product properties should not be accessed directly. Backtrace: require('wp-blog-header.php'), require_once('wp-includes/template-loader.php'), include('/plugins/woocommerce/templates/archive-product.php'), wc_get_template_part, load_template, require('/plugins/woocommerce/templates/content-product.php'), do_action('woocommerce_after_shop_loop_item_title'), WP_Hook->do_action, WP_Hook->apply_filters, woocommerce_template_loop_price, wc_get_template, include('/plugins/woocommerce/templates/loop/price.php'), WC_Product->get_price_html, apply_filters('woocommerce_get_price_html'), WP_Hook->apply_filters, WC_Wax->wax_change_product_price, WC_Abstract_Legacy_Product->__get, wc_doing_it_wrong Please see <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Debugging in WordPress</a> for more information. (This message was added in version 3.0.) in /var/www/html/wp-includes/functions.php on line 5167
+[13-Jul-2020 09:45:45 UTC] PHP Stack trace:
+[13-Jul-2020 09:45:45 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 09:45:45 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 09:45:45 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 09:45:45 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 09:45:45 UTC] PHP   5. wc_get_template_part() /var/www/html/wp-content/plugins/woocommerce/templates/archive-product.php:70
+[13-Jul-2020 09:45:45 UTC] PHP   6. load_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:197
+[13-Jul-2020 09:45:45 UTC] PHP   7. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 09:45:45 UTC] PHP   8. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/content-product.php:57
+[13-Jul-2020 09:45:45 UTC] PHP   9. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:45:45 UTC] PHP  10. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:45:45 UTC] PHP  11. woocommerce_template_loop_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:45:45 UTC] PHP  12. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:1288
+[13-Jul-2020 09:45:45 UTC] PHP  13. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 09:45:45 UTC] PHP  14. WC_Product_Simple->get_price_html() /var/www/html/wp-content/plugins/woocommerce/templates/loop/price.php:25
+[13-Jul-2020 09:45:45 UTC] PHP  15. apply_filters() /var/www/html/wp-content/plugins/woocommerce/includes/abstracts/abstract-wc-product.php:1767
+[13-Jul-2020 09:45:45 UTC] PHP  16. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 09:45:45 UTC] PHP  17. WC_Wax->wax_change_product_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:45:45 UTC] PHP  18. WC_Product_Simple->__get() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:162
+[13-Jul-2020 09:45:45 UTC] PHP  19. wc_doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/legacy/abstract-wc-legacy-product.php:72
+[13-Jul-2020 09:45:45 UTC] PHP  20. _doing_it_wrong() /var/www/html/wp-content/plugins/woocommerce/includes/wc-deprecated-functions.php:118
+[13-Jul-2020 09:45:45 UTC] PHP  21. trigger_error() /var/www/html/wp-includes/functions.php:5167
+[13-Jul-2020 09:47:40 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[13-Jul-2020 09:47:40 UTC] PHP Stack trace:
+[13-Jul-2020 09:47:40 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:47:40 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:47:40 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:47:40 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:47:40 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:47:40 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:47:40 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 09:47:40 UTC] PHP Stack trace:
+[13-Jul-2020 09:47:40 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:47:40 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:47:40 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:47:40 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:47:40 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:47:40 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:47:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 09:47:40 UTC] PHP Stack trace:
+[13-Jul-2020 09:47:40 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:47:40 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:47:40 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:47:40 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:47:40 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:47:40 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:47:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[13-Jul-2020 09:47:40 UTC] PHP Stack trace:
+[13-Jul-2020 09:47:40 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:47:40 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:47:40 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:47:40 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:47:40 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:47:40 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:47:40 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[13-Jul-2020 09:47:40 UTC] PHP Stack trace:
+[13-Jul-2020 09:47:40 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:47:40 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:47:40 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:47:40 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:47:40 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:47:40 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:54:16 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[13-Jul-2020 09:54:16 UTC] PHP Stack trace:
+[13-Jul-2020 09:54:16 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:54:16 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:54:16 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:54:16 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:54:16 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:54:16 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:54:16 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 09:54:16 UTC] PHP Stack trace:
+[13-Jul-2020 09:54:16 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:54:16 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:54:16 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:54:16 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:54:16 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:54:16 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:54:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 09:54:16 UTC] PHP Stack trace:
+[13-Jul-2020 09:54:16 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:54:16 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:54:16 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:54:16 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:54:16 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:54:16 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:54:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[13-Jul-2020 09:54:16 UTC] PHP Stack trace:
+[13-Jul-2020 09:54:16 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:54:16 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:54:16 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:54:16 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:54:16 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:54:16 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 09:54:16 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[13-Jul-2020 09:54:16 UTC] PHP Stack trace:
+[13-Jul-2020 09:54:16 UTC] PHP   1. {main}() /var/www/html/wp-admin/admin-ajax.php:0
+[13-Jul-2020 09:54:16 UTC] PHP   2. do_action() /var/www/html/wp-admin/admin-ajax.php:190
+[13-Jul-2020 09:54:16 UTC] PHP   3. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 09:54:16 UTC] PHP   4. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 09:54:16 UTC] PHP   5. Wax_Ajax::check_for_payment() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 09:54:16 UTC] PHP   6. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-ajax.php:125
+[13-Jul-2020 10:02:04 UTC] PHP Notice:  Undefined property: WP_Error::$status in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 27
+[13-Jul-2020 10:02:04 UTC] PHP Stack trace:
+[13-Jul-2020 10:02:04 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 10:02:04 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 10:02:04 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 10:02:04 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 10:02:04 UTC] PHP   5. get_template_part() /var/www/html/wp-content/themes/storefront/page.php:24
+[13-Jul-2020 10:02:04 UTC] PHP   6. locate_template() /var/www/html/wp-includes/general-template.php:168
+[13-Jul-2020 10:02:04 UTC] PHP   7. load_template() /var/www/html/wp-includes/template.php:672
+[13-Jul-2020 10:02:04 UTC] PHP   8. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 10:02:04 UTC] PHP   9. do_action() /var/www/html/wp-content/themes/storefront/content-page.php:18
+[13-Jul-2020 10:02:04 UTC] PHP  10. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  11. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  12. storefront_page_content() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  13. the_content() /var/www/html/wp-content/themes/storefront/inc/storefront-template-functions.php:351
+[13-Jul-2020 10:02:04 UTC] PHP  14. apply_filters() /var/www/html/wp-includes/post-template.php:253
+[13-Jul-2020 10:02:04 UTC] PHP  15. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  16. do_shortcode() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  17. preg_replace_callback() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  18. do_shortcode_tag() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  19. WC_Shortcodes::checkout() /var/www/html/wp-includes/shortcodes.php:343
+[13-Jul-2020 10:02:04 UTC] PHP  20. WC_Shortcodes::shortcode_wrapper() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:95
+[13-Jul-2020 10:02:04 UTC] PHP  21. WC_Shortcode_Checkout::output() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:72
+[13-Jul-2020 10:02:04 UTC] PHP  22. WC_Shortcode_Checkout::checkout() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:67
+[13-Jul-2020 10:02:04 UTC] PHP  23. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:294
+[13-Jul-2020 10:02:04 UTC] PHP  24. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  25. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php:59
+[13-Jul-2020 10:02:04 UTC] PHP  26. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  27. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  28. woocommerce_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  29. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[13-Jul-2020 10:02:04 UTC] PHP  30. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  31. apply_filters() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:43
+[13-Jul-2020 10:02:04 UTC] PHP  32. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  33. WC_Wax->wax_change_cart_item_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  34. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:172
+[13-Jul-2020 10:02:04 UTC] PHP  35. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[13-Jul-2020 10:02:04 UTC] PHP Notice:  Undefined property: WP_Error::$data in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 10:02:04 UTC] PHP Stack trace:
+[13-Jul-2020 10:02:04 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 10:02:04 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 10:02:04 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 10:02:04 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 10:02:04 UTC] PHP   5. get_template_part() /var/www/html/wp-content/themes/storefront/page.php:24
+[13-Jul-2020 10:02:04 UTC] PHP   6. locate_template() /var/www/html/wp-includes/general-template.php:168
+[13-Jul-2020 10:02:04 UTC] PHP   7. load_template() /var/www/html/wp-includes/template.php:672
+[13-Jul-2020 10:02:04 UTC] PHP   8. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 10:02:04 UTC] PHP   9. do_action() /var/www/html/wp-content/themes/storefront/content-page.php:18
+[13-Jul-2020 10:02:04 UTC] PHP  10. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  11. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  12. storefront_page_content() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  13. the_content() /var/www/html/wp-content/themes/storefront/inc/storefront-template-functions.php:351
+[13-Jul-2020 10:02:04 UTC] PHP  14. apply_filters() /var/www/html/wp-includes/post-template.php:253
+[13-Jul-2020 10:02:04 UTC] PHP  15. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  16. do_shortcode() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  17. preg_replace_callback() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  18. do_shortcode_tag() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  19. WC_Shortcodes::checkout() /var/www/html/wp-includes/shortcodes.php:343
+[13-Jul-2020 10:02:04 UTC] PHP  20. WC_Shortcodes::shortcode_wrapper() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:95
+[13-Jul-2020 10:02:04 UTC] PHP  21. WC_Shortcode_Checkout::output() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:72
+[13-Jul-2020 10:02:04 UTC] PHP  22. WC_Shortcode_Checkout::checkout() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:67
+[13-Jul-2020 10:02:04 UTC] PHP  23. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:294
+[13-Jul-2020 10:02:04 UTC] PHP  24. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  25. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php:59
+[13-Jul-2020 10:02:04 UTC] PHP  26. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  27. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  28. woocommerce_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  29. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[13-Jul-2020 10:02:04 UTC] PHP  30. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  31. apply_filters() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:43
+[13-Jul-2020 10:02:04 UTC] PHP  32. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  33. WC_Wax->wax_change_cart_item_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  34. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:172
+[13-Jul-2020 10:02:04 UTC] PHP  35. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[13-Jul-2020 10:02:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 35
+[13-Jul-2020 10:02:04 UTC] PHP Stack trace:
+[13-Jul-2020 10:02:04 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 10:02:04 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 10:02:04 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 10:02:04 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 10:02:04 UTC] PHP   5. get_template_part() /var/www/html/wp-content/themes/storefront/page.php:24
+[13-Jul-2020 10:02:04 UTC] PHP   6. locate_template() /var/www/html/wp-includes/general-template.php:168
+[13-Jul-2020 10:02:04 UTC] PHP   7. load_template() /var/www/html/wp-includes/template.php:672
+[13-Jul-2020 10:02:04 UTC] PHP   8. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 10:02:04 UTC] PHP   9. do_action() /var/www/html/wp-content/themes/storefront/content-page.php:18
+[13-Jul-2020 10:02:04 UTC] PHP  10. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  11. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  12. storefront_page_content() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  13. the_content() /var/www/html/wp-content/themes/storefront/inc/storefront-template-functions.php:351
+[13-Jul-2020 10:02:04 UTC] PHP  14. apply_filters() /var/www/html/wp-includes/post-template.php:253
+[13-Jul-2020 10:02:04 UTC] PHP  15. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  16. do_shortcode() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  17. preg_replace_callback() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  18. do_shortcode_tag() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  19. WC_Shortcodes::checkout() /var/www/html/wp-includes/shortcodes.php:343
+[13-Jul-2020 10:02:04 UTC] PHP  20. WC_Shortcodes::shortcode_wrapper() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:95
+[13-Jul-2020 10:02:04 UTC] PHP  21. WC_Shortcode_Checkout::output() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:72
+[13-Jul-2020 10:02:04 UTC] PHP  22. WC_Shortcode_Checkout::checkout() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:67
+[13-Jul-2020 10:02:04 UTC] PHP  23. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:294
+[13-Jul-2020 10:02:04 UTC] PHP  24. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  25. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php:59
+[13-Jul-2020 10:02:04 UTC] PHP  26. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  27. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  28. woocommerce_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  29. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[13-Jul-2020 10:02:04 UTC] PHP  30. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  31. apply_filters() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:43
+[13-Jul-2020 10:02:04 UTC] PHP  32. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  33. WC_Wax->wax_change_cart_item_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  34. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:172
+[13-Jul-2020 10:02:04 UTC] PHP  35. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[13-Jul-2020 10:02:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 40
+[13-Jul-2020 10:02:04 UTC] PHP Stack trace:
+[13-Jul-2020 10:02:04 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 10:02:04 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 10:02:04 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 10:02:04 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 10:02:04 UTC] PHP   5. get_template_part() /var/www/html/wp-content/themes/storefront/page.php:24
+[13-Jul-2020 10:02:04 UTC] PHP   6. locate_template() /var/www/html/wp-includes/general-template.php:168
+[13-Jul-2020 10:02:04 UTC] PHP   7. load_template() /var/www/html/wp-includes/template.php:672
+[13-Jul-2020 10:02:04 UTC] PHP   8. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 10:02:04 UTC] PHP   9. do_action() /var/www/html/wp-content/themes/storefront/content-page.php:18
+[13-Jul-2020 10:02:04 UTC] PHP  10. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  11. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  12. storefront_page_content() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  13. the_content() /var/www/html/wp-content/themes/storefront/inc/storefront-template-functions.php:351
+[13-Jul-2020 10:02:04 UTC] PHP  14. apply_filters() /var/www/html/wp-includes/post-template.php:253
+[13-Jul-2020 10:02:04 UTC] PHP  15. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  16. do_shortcode() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  17. preg_replace_callback() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  18. do_shortcode_tag() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  19. WC_Shortcodes::checkout() /var/www/html/wp-includes/shortcodes.php:343
+[13-Jul-2020 10:02:04 UTC] PHP  20. WC_Shortcodes::shortcode_wrapper() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:95
+[13-Jul-2020 10:02:04 UTC] PHP  21. WC_Shortcode_Checkout::output() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:72
+[13-Jul-2020 10:02:04 UTC] PHP  22. WC_Shortcode_Checkout::checkout() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:67
+[13-Jul-2020 10:02:04 UTC] PHP  23. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:294
+[13-Jul-2020 10:02:04 UTC] PHP  24. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  25. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php:59
+[13-Jul-2020 10:02:04 UTC] PHP  26. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  27. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  28. woocommerce_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  29. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[13-Jul-2020 10:02:04 UTC] PHP  30. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  31. apply_filters() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:43
+[13-Jul-2020 10:02:04 UTC] PHP  32. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  33. WC_Wax->wax_change_cart_item_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  34. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:172
+[13-Jul-2020 10:02:04 UTC] PHP  35. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
+[13-Jul-2020 10:02:04 UTC] PHP Notice:  Trying to access array offset on value of type null in /var/www/html/wp-content/plugins/woocommerce-gateway-wax/includes/class-wax-currency.php on line 44
+[13-Jul-2020 10:02:04 UTC] PHP Stack trace:
+[13-Jul-2020 10:02:04 UTC] PHP   1. {main}() /var/www/html/index.php:0
+[13-Jul-2020 10:02:04 UTC] PHP   2. require() /var/www/html/index.php:17
+[13-Jul-2020 10:02:04 UTC] PHP   3. require_once() /var/www/html/wp-blog-header.php:19
+[13-Jul-2020 10:02:04 UTC] PHP   4. include() /var/www/html/wp-includes/template-loader.php:106
+[13-Jul-2020 10:02:04 UTC] PHP   5. get_template_part() /var/www/html/wp-content/themes/storefront/page.php:24
+[13-Jul-2020 10:02:04 UTC] PHP   6. locate_template() /var/www/html/wp-includes/general-template.php:168
+[13-Jul-2020 10:02:04 UTC] PHP   7. load_template() /var/www/html/wp-includes/template.php:672
+[13-Jul-2020 10:02:04 UTC] PHP   8. require() /var/www/html/wp-includes/template.php:725
+[13-Jul-2020 10:02:04 UTC] PHP   9. do_action() /var/www/html/wp-content/themes/storefront/content-page.php:18
+[13-Jul-2020 10:02:04 UTC] PHP  10. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  11. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  12. storefront_page_content() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  13. the_content() /var/www/html/wp-content/themes/storefront/inc/storefront-template-functions.php:351
+[13-Jul-2020 10:02:04 UTC] PHP  14. apply_filters() /var/www/html/wp-includes/post-template.php:253
+[13-Jul-2020 10:02:04 UTC] PHP  15. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  16. do_shortcode() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  17. preg_replace_callback() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  18. do_shortcode_tag() /var/www/html/wp-includes/shortcodes.php:218
+[13-Jul-2020 10:02:04 UTC] PHP  19. WC_Shortcodes::checkout() /var/www/html/wp-includes/shortcodes.php:343
+[13-Jul-2020 10:02:04 UTC] PHP  20. WC_Shortcodes::shortcode_wrapper() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:95
+[13-Jul-2020 10:02:04 UTC] PHP  21. WC_Shortcode_Checkout::output() /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php:72
+[13-Jul-2020 10:02:04 UTC] PHP  22. WC_Shortcode_Checkout::checkout() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:67
+[13-Jul-2020 10:02:04 UTC] PHP  23. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-checkout.php:294
+[13-Jul-2020 10:02:04 UTC] PHP  24. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  25. do_action() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/form-checkout.php:59
+[13-Jul-2020 10:02:04 UTC] PHP  26. WP_Hook->do_action() /var/www/html/wp-includes/plugin.php:478
+[13-Jul-2020 10:02:04 UTC] PHP  27. WP_Hook->apply_filters() /var/www/html/wp-includes/class-wp-hook.php:311
+[13-Jul-2020 10:02:04 UTC] PHP  28. woocommerce_order_review() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  29. wc_get_template() /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:2216
+[13-Jul-2020 10:02:04 UTC] PHP  30. include() /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php:251
+[13-Jul-2020 10:02:04 UTC] PHP  31. apply_filters() /var/www/html/wp-content/plugins/woocommerce/templates/checkout/review-order.php:43
+[13-Jul-2020 10:02:04 UTC] PHP  32. WP_Hook->apply_filters() /var/www/html/wp-includes/plugin.php:206
+[13-Jul-2020 10:02:04 UTC] PHP  33. WC_Wax->wax_change_cart_item_total_price() /var/www/html/wp-includes/class-wp-hook.php:287
+[13-Jul-2020 10:02:04 UTC] PHP  34. WC_Wax->change_price_to_wax() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:172
+[13-Jul-2020 10:02:04 UTC] PHP  35. Wax_Currency::get_wax_amount() /var/www/html/wp-content/plugins/woocommerce-gateway-wax/woocommerce-gateway-wax.php:182
