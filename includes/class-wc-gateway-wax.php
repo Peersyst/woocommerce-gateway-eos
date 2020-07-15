@@ -21,7 +21,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
         $this->method_title = __('WAX', 'woocommerce-gateway-wax');
         $this->method_description = __('WAX works by letting clients pay WAX to your WAX wallet for orders in you shop.', 'woocommerce-gateway-wax');
         $this->has_fields = true;
-        $this->icon = WC_WAX_PLUGIN_URL . ('/assets/img/pay_with_wax.png');
+        $this->icon = WC_WAX_PLUGIN_URL . ('/assets/img/pay_with_wax.svg');
         $this->order_button_text = "Waiting for payment";
 
 
@@ -90,7 +90,12 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
 
 
         //QRcode TODO: button
-        echo '<div id="wax-qr"><button id="wax-pay-button">Pay</button></div>';
+        echo '<div id="wax-qr">
+                <div id="wax-tx-accepted" style="font-weight: bold; text-align: center; margin-bottom: 20px; display: none;">
+                    Transaction accepted, pending to be confirmed
+                </div>
+                <a id="wax-pay-button" class="wax-pay-button">Pay using cloud wallet</a>
+            </div>';
 
         echo '<div id="wax-payment-desc">';
 

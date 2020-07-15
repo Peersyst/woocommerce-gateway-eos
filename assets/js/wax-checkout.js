@@ -18,6 +18,7 @@
                 }
 
                 // TODO: WAX payment button
+                $("#wax-pay-button").off('click');
                 $("#wax-pay-button").on('click', function(){
                     waxPayment.payWithWax(this.waxAddress, this.waxAmount, this.waxRef);
                 }.bind(this));
@@ -59,6 +60,12 @@
         payWithWax: function (receiver, amount, memo) {
             var wax = new waxjs.WaxJS('https://wax.greymass.com', null, null, false);
             wax.login().then(function (ret) {
+                console.log(ret);
+                console.log(wax.userAccount);
+                console.log(receiver);
+                console.log(amount.toFixed(8) + ' WAX');
+                console.log(memo);
+
                 wax.api.transact({
                     actions: [{
                       account: 'eosio.token',
@@ -85,11 +92,12 @@
                   });
             }).catch(function (e) {
                 console.error(e);
-              // User rejected the transaction 
+              // User rejected the transaction
             });
         },
         showPendingToConfirm: function () {
-            // TODO:
+            $('#wax-pay-button').css("display","none");
+            $('#wax-tx-accepted').css("display","block");
         },
         updateWaxAmount: function () {
             this.ajaxGetWaxAmount().done(function (res) {
