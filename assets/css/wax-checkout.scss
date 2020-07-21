@@ -60,7 +60,6 @@
 }
 
 #wax-pay-button {
-    width: 100% !important;
     align-items:flex-start;
     background-attachment:scroll;
     background-clip:border-box;
@@ -104,7 +103,7 @@
     font-variant-ligatures:normal;
     font-variant-numeric:normal;
     font-weight:600;
-    height:44.75px;
+    min-height:44.75px;
     letter-spacing:normal;
     line-height:25.888px;
     list-style-image:none;
@@ -130,7 +129,7 @@
     text-shadow:none;
     text-size-adjust:100%;
     text-transform:none;
-    width:572.969px;
+    width:100%;
     word-spacing:0px;
     writing-mode:horizontal-tb;
     -webkit-appearance:none;
