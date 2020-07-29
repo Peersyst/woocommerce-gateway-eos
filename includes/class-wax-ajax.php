@@ -84,7 +84,7 @@ class Wax_Ajax {
 
 	    $amount = \sanitize_text_field($_REQUEST['amount']);
 		$currency = \sanitize_text_field($_REQUEST['currency']);
-		
+
 		error_log($amount);
 		// var_dump($amount);
 
@@ -115,7 +115,7 @@ class Wax_Ajax {
 
         $wax_options = get_option('woocommerce_wax_settings');
 		$wax_address = $wax_options['wax_address'];
-		$api_key = $wax_options['api_key'];
+		$server = $wax_options['server_url'];
 		$match_amount = $wax_options['match_amount'];
 
 		//If we also want to do amount matching
@@ -130,7 +130,7 @@ class Wax_Ajax {
 
 		//Get latest transactions
 		include_once ('class-wax-api.php');
-		$transactions = WaxApi::get_latest_transactions($wax_address, $api_key);
+		$transactions = WaxApi::get_latest_transactions($wax_address, $server);
 
 		if(!$transactions){
 			self::error("No transactions from WAX");
@@ -141,7 +141,7 @@ class Wax_Ajax {
 		$matched_transaction = false;
 		$decimal_amount_precision = 1;
 		foreach ($transactions as $key => $t){
-			$message = $t->action->data->memo;
+			$message = $t->message;
 			//Check for matching message
 			if( $ref_id === $message ){
 				$message_match = true;

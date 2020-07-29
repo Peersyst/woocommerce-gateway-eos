@@ -27,11 +27,11 @@ return apply_filters( 'wc_wax_settings',
 			'default'     => __( 'Pay with WAX.', 'woocommerce-gateway-wax'),
 			'desc_tip'    => true,
 		),
-		'api_key' => array(
-			'title'       => __( 'Dfuse API key', 'woocommerce-gateway-wax' ),
+		'server_url' => array(
+			'title'       => __( 'Server URL', 'woocommerce-gateway-wax' ),
 			'type'        => 'text',
-			'description' => __( 'A dfuse api key is needed to get data from the blockchain. You can get one at https://app.dfuse.io/', 'woocommerce-gateway-wax' ),
-			'default'     => __( '', 'woocommerce-gateway-wax'),
+			'description' => __( 'A server API entrypoint supporting v2. For example: https://api.waxsweden.org/v2', 'woocommerce-gateway-wax' ),
+			'default'     => __( 'https://api.waxsweden.org/v2', 'woocommerce-gateway-wax'),
 			'desc_tip'    => true,
 		),
 		'wax_address' => array(

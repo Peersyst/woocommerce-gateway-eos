@@ -92,7 +92,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
         //QRcode TODO: button
         echo '<div id="wax-qr">
                 <div id="wax-tx-accepted" style="font-weight: bold; text-align: center; margin-bottom: 20px; display: none;">
-                    Transaction accepted, pending to be confirmed
+                    Transaction sent. Waiting to be confirmed... please DON\'T CLOSE this window.
                 </div>
                 <a id="wax-pay-button" class="wax-pay-button">Pay using cloud wallet</a>
             </div>';
