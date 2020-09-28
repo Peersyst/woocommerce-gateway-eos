@@ -26,7 +26,7 @@ class WC_FioApi {
 			return false;
 		}
 		$body = json_decode($res->data['body']);
-		if(is_object($body) && !empty($body->)) {
+		if(is_object($body) && !empty($body->actions)) {
 			return $body->actions;
 		}
 	}
@@ -38,22 +38,23 @@ class WC_FioApi {
 	// filter transactions (only fio), and map to only contain act->(data)
 	// keep the id of the transaction
 	public static function transform_transactions($transactions) {
+		// var_dump($transactions);
+		// throw new Exception($transactions);
 		$mapped = array_map(function ($transaction) {
 			return (object) [
 				'id' => $transaction->trx_id,
 				'action' => $transaction->act->data,
-				'amount' => WCFioApi::transform_amount($transaction->act->data->amount)
+				'amount' => WC_FioApi::transform_amount($transaction->act->data->amount)
 			  ];
 		}, $transactions);
-		$filtered = array_filter($mapped, function ($transaction) {
-			return $transaction->action->symbol === 'FIO';
-		});
-		return $filtered;
+		return $mapped;
 	}
 
 	public static function get_latest_transactions($account) {
+		error_log(print_r($t, true));
 		$transactions = WC_FioApi::get_latest_100_transactions($account);
-		return WC_FIOApi::transform_transactions($transactions);
+		$t = WC_FIOApi::transform_transactions($transactions);
+		return $t;
 	}
 
 }

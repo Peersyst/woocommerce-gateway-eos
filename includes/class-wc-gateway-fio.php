@@ -59,6 +59,12 @@ class WC_Gateway_Fio extends WC_Payment_Gateway {
         $user = wp_get_current_user();
         $fio_amount = WC_Fio_Currency::get_fio_amount($this->get_order_total(), strtoupper(get_woocommerce_currency()));
 
+        $fio_ref = wp_create_nonce("3h62h6u26h42h6i2462h6u4h624");
+        $fio_ref = hexdec($fio_ref) % 100000;
+        $fio_ref_dec = $fio_ref / 10000000;
+
+        $fio_amount = round($fio_amount, 2) + $fio_ref_dec;
+
         //Todo: Lock amount for 5 minutes
         WC()->session->set('fio_amount', $fio_amount);
 
@@ -69,8 +75,6 @@ class WC_Gateway_Fio extends WC_Payment_Gateway {
             $user_email = '';
         }
 
-        $fio_ref = wp_create_nonce("3h62h6u26h42h6i2462h6u4h624");
-
         //Start wrapper
         echo '<div id="fio-form"
 			data-email="' . esc_attr($user_email) . '"
@@ -78,8 +82,8 @@ class WC_Gateway_Fio extends WC_Payment_Gateway {
 			data-currency="' . esc_attr(strtolower(get_woocommerce_currency())) . '"
 			data-fio-address="' . esc_attr($this->fio_address) . '"
 			data-fio-amount="' . esc_attr($fio_amount) . '"
-			data-fio-ref="' . esc_attr($fio_ref) . '"
 			">';
+			// data-fio-ref="' . esc_attr($fio_ref) . '"
 
         //Info box
         echo '<div id="fio-description">';
@@ -106,10 +110,10 @@ class WC_Gateway_Fio extends WC_Payment_Gateway {
         echo '<label id="fio-address-wrapper" class="fio-label fio-address" data-clipboard-text="' . esc_attr($this->fio_address) . '">' . esc_attr($this->fio_address) . '</label>';
         echo '</div>';
 
-        echo '<div class="fio-payment-desc-row">';
-        echo '<label class="fio-label-for">' . __('Reference:', 'woocommerce-gateway-fio') . '</label>';
-        echo '<label id="fio-ref-wrapper" class="fio-label fio-ref" data-clipboard-text="' . esc_attr($fio_ref) . '">' . esc_attr($fio_ref) . '</label>';
-        echo '</div>';
+        // echo '<div class="fio-payment-desc-row">';
+        // echo '<label class="fio-label-for">' . __('Reference:', 'woocommerce-gateway-fio') . '</label>';
+        // echo '<label id="fio-ref-wrapper" class="fio-label fio-ref" data-clipboard-text="' . esc_attr($fio_ref) . '">' . esc_attr($fio_ref) . '</label>';
+        // echo '</div>';
 
         echo '</div>';
 

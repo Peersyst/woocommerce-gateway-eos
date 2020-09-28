@@ -29,7 +29,7 @@ gulp.task('serve', ['sass', 'js'], function() {
 
 //sass
 gulp.task('sass', function() {
-	return gulp.src(['assets/css/wax-checkout.scss'])
+	return gulp.src(['assets/css/fio-checkout.scss'])
 		.pipe(plumber())
 		.pipe(sourcemaps.init())
 		.pipe(sass())
@@ -40,9 +40,9 @@ gulp.task('sass', function() {
 
 //js frontend
 gulp.task('js', function(){
-	return gulp.src(['assets/js/wax-checkout.js'])
+	return gulp.src(['assets/js/fio-checkout.js'])
 		.pipe(sourcemaps.init())
-		.pipe(concat('wax-checkout.min.js'))
+		.pipe(concat('fio-checkout.min.js'))
 		.pipe(gulp.dest('assets/js/'))
 		.pipe(uglify())
 		.pipe(sourcemaps.write('maps/'))
@@ -60,7 +60,7 @@ gulp.task('clean', function () {
 
 gulp.task('zip', ['copy'], function () {
 	return gulp.src('dist/**')
-		.pipe(zip('woocommerce-gateway-wax.zip'))
+		.pipe(zip('woocommerce-gateway-fio.zip'))
 		.pipe(gulp.dest(''));
 });
 

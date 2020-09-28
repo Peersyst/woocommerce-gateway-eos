@@ -15,7 +15,12 @@ class WC_Fio_Currency {
 	 * @returns
 	 * */
 	public static function get_fio_amount($amount, $currency = "EUR"){
-		$currency = strtoupper($currency);
+        $currency = strtoupper($currency);
+        
+        // var_dump("hello");
+        // var_dump(WP_DEBUG);
+        error_log("error");
+        // throw new Exception("foo");
 
         $response = wp_remote_get('https://min-api.cryptocompare.com/data/price?fsym=' . $currency . '&tsyms=FIO');
         if ( !$response ) {

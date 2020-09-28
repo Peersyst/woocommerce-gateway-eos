@@ -20,17 +20,17 @@
                 //Prepare NEM qr code data
                 // Invoice model for QR
                 this.paymentData = {
-                    "v": wc_wax_params.test ? 1 : 2,
+                    "v": wc_fio_params.test ? 1 : 2,
                     "type": 2,
                     "data": {
-                        "addr": this.waxAddress.toUpperCase().replace(/-/g, ''),
-                        "amount": this.waxAmount * 1000000,
-                        "msg": this.waxRef,
-                        "name": "WAX payment to " + wc_wax_params.store
+                        "addr": this.fioAddress.toUpperCase().replace(/-/g, ''),
+                        "amount": this.fioAmount * 1000000,
+                        "msg": this.fioRef,
+                        "name": "FIO payment to " + wc_fio_params.store
                     }
                 };
                 //Generate the QR code with address
-                new QRCode("wax-qr", {
+                new QRCode("fio-qr", {
                     text: JSON.stringify(this.paymentData),
                     size: 256,
                     fill: '#000',
@@ -40,21 +40,21 @@
 
                 /*Add copy functinality to amount, ref and nem address*/
                 if(false && Clipboard.isSupported()){
-                    new Clipboard('#wax-amount-wrapper');
-                    new Clipboard('#wax-address-wrapper');
-                    new Clipboard('#wax-ref-wrapper');
+                    new Clipboard('#fio-amount-wrapper');
+                    new Clipboard('#fio-address-wrapper');
+                    new Clipboard('#fio-ref-wrapper');
                 }
 
                 //Set payment button to disabled if whole chech is updated.
-                if($( 'div.payment_box.payment_method_wax' ).is(':visible')){
+                if($( 'div.payment_box.payment_method_fio' ).is(':visible')){
                     $( '#place_order' ).attr( 'disabled', true);
                 }else{
-                    $( '#place_order' ).attr( 'disabled', false)
+                    $( '#place_order' ).attr( 'disabled', false);
                 }
 
                 /*Set pay button to disabled and start waiting for payments*/
                 $('.wc_payment_methods  > li').on( 'click', 'input[name="payment_method"]',function () {
-                    if ( $( this ).is( '#payment_method_wax' ) ) {
+                    if ( $( this ).is( '#payment_method_fio' ) ) {
                         $( '#place_order' ).attr( 'disabled', true);
                     }else{
                         $( '#place_order' ).attr( 'disabled', false)
@@ -62,12 +62,12 @@
                 });
 
                 var options = {
-                    classname: 'nanobar-wax',
-                    id: 'wax-nanobar',
-                    target: document.getElementById('wax-process')
+                    classname: 'nanobar-fio',
+                    id: 'fio-nanobar',
+                    target: document.getElementById('fio-process')
                 };
 
-                waxPayment.nanobar = new Nanobar( options );
+                fioPayment.nanobar = new Nanobar( options );
             });
 
 
@@ -84,6 +84,7 @@
         },
         checkForFioPayment: function () {
             this.nanobar.go(25);
+            console.log("checking");
             $.ajax({
                 url: wc_fio_params.wc_ajax_url,
                 type: 'post',
@@ -92,16 +93,19 @@
                     nounce: wc_fio_params.nounce
                 }
             }).done(function (res) {
-                $('#fio-check').html('<p id="fio-check">Checking..</p>');
-                //console.log(res);
-                //console.log("Match: " + res.data.match);
+                // $('#fio-check').html('<p id="fio-check">Checking..</p>');
+                console.log(res);
+                console.log("Match: " + res.data.match);
                 if(res.success === true && res.data.match === true){
                     $( '#place_order' ).attr( 'disabled', false);
                     $( '#place_order' ).trigger( 'click');
                 }
                 setTimeout(function() {
-                    waxPayment.checkForFioPayment();
+                    fioPayment.checkForFioPayment();
                 }, 5000);
+            }).fail(function (err) {
+                console.log("epic fail");
+                console.log(err);
             });
             this.nanobar.go(100);
         },

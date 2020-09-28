@@ -1,0 +1,60 @@
+#fio-form{
+
+}
+#fio-qr {
+    padding-top: 20px;
+}
+#fio-qr  > img {
+    float: none !important;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+    max-height: none !important;
+}
+#fio-qr-desc{
+    padding-top: 20px;
+
+}
+
+#fio-amount-wrapper{
+    clear: both;
+    cursor: pointer;
+}
+/*Ads the icon after NEM amount for copy*/
+#fio-amount-wrapper:after{
+    content: url('../img/copy.png');
+    padding-left: 5px;
+}
+
+#fio-address-wrapper{
+    clear: both;
+    cursor: pointer;
+}
+/*Ads the icon after NEM address for copy*/
+#fio-address-wrapper:after{
+    content: url('../img/copy.png');
+    padding-left: 5px;
+}
+#fio-ref-wrapper{
+    clear: both;
+    cursor: pointer;
+}
+/*Ads the icon after NEM address for copy*/
+#fio-ref-wrapper:after{
+    content: url('../img/copy.png');
+    padding-left: 5px;
+}
+
+.fio-payment-desc-row{
+    display: block;
+    margin-bottom: 5px;
+}
+.fio-label-for{
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.fio-label{
+    float: right;
+    font-size: 16px;
+}
