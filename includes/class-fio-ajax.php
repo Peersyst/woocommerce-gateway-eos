@@ -84,9 +84,6 @@ class WC_Fio_Ajax {
 
 	    $amount = \sanitize_text_field($_REQUEST['amount']);
 		$currency = \sanitize_text_field($_REQUEST['currency']);
-		
-		// error_log($amount);
-		var_dump($amount);
 
 	    $amount = WC()->cart->total;
 	    $currency = strtoupper( get_woocommerce_currency() ) ;
@@ -115,7 +112,6 @@ class WC_Fio_Ajax {
         $fio_options = get_option('woocommerce_fio_settings');
 		$fio_address = $fio_options['fio_address'];
 		$fio_account = $fio_options['fio_account'];
-		$match_amount = $fio_options['match_amount'];
 
 		//If we also want to do amount matching
 		$amount = WC()->cart->total;
@@ -125,7 +121,6 @@ class WC_Fio_Ajax {
 		$fio_amount_locked = WC()->session->get('fio_amount');
 		//Remove the currency
 		$fio_amount_locked = floatval($fio_amount_locked);
-		// throw new Error(strval($fio_amount_locked));
 		//Todo: If locked and new amount diff to much, we can call a refresh.
 
 		//Get latest transactions
@@ -134,8 +129,6 @@ class WC_Fio_Ajax {
 
 		if(!$transactions){
 			self::error("No transactions from FIO");
-		} else {
-			// throw new Exception(print_r($transactions, true));
 		}
 		$message_match = false;
 		$message_amount_match = false;
@@ -143,14 +136,11 @@ class WC_Fio_Ajax {
 		$matched_transaction = false;
 		$decimal_amount_precision = 1;
 		foreach ($transactions as $key => $t){
-			// throw new Exception(print_r($t, true));
-			// TODO: match 5 last decimals?
 
 			$whole = floor($t->amount * 100);
 			$dec = ($t->amount * 100) - $whole;
 			$ref = floor($dec * 100000);
 
-			// throw new Exception(strval($ref)."-".strval($ref_id)." amounts: ".strval(round($t->amount,$decimal_amount_precision))."-".strval(round($fio_amount_locked,$decimal_amount_precision)));
 			//Check for matching decimals
 			if( strval($ref_id) === strval($ref) ){
 				$message_match = true;
@@ -161,38 +151,16 @@ class WC_Fio_Ajax {
 					$message_amount_match = true;
 					$matched_transaction = $t;
 					break;
-				} else {
-					throw new Exception(" amounts: ".strval(round($t->amount,$decimal_amount_precision))."-".strval(round($fio_amount_locked,$decimal_amount_precision)));
-				}
-			} else {
-				throw new Exception(strval($ref)."-".strval($ref_id)."--".strval($ref === $ref_id));
-			}
-
-			//if we also do only match on amount we try it here, but then the amount must be axactly.
-			if(!$message_amount_match && $match_amount){
-				$fio_amount_lock_check = $fio_amount_locked;
-				$fio_amount_transaction_check = $t->amount;
-				if( $fio_amount_lock_check === $fio_amount_transaction_check ){
-					$amount_match = true;
-					$matched_transaction = $t;
-					break;
 				}
 			}
 
 		}
-
-		// if (self::not_used_fio_transaction($matched_transaction)) {
-		// 	error_log(print_r($matched_transaction, true));
-		// } else {
-		// 	error_log("transaction already used");
-		// }
 
 		//Check if we found a matched transaction
 		//Then check that this transaction is not already connected to an order
 		if($matched_transaction && self::not_used_fio_transaction($matched_transaction)){
 			//If not we can go ahead and process order
 			WC()->session->set('fio_payment', json_encode($matched_transaction ));
-			// throw new Exception("hoseuhtonesuhtanosh");
 			self::send(array(
 				'match' => true,
 				'matched_transaction' => $matched_transaction,

@@ -38,8 +38,6 @@ class WC_FioApi {
 	// filter transactions (only fio), and map to only contain act->(data)
 	// keep the id of the transaction
 	public static function transform_transactions($transactions) {
-		// var_dump($transactions);
-		// throw new Exception($transactions);
 		$mapped = array_map(function ($transaction) {
 			return (object) [
 				'id' => $transaction->trx_id,
@@ -51,7 +49,6 @@ class WC_FioApi {
 	}
 
 	public static function get_latest_transactions($account) {
-		error_log(print_r($t, true));
 		$transactions = WC_FioApi::get_latest_100_transactions($account);
 		$t = WC_FIOApi::transform_transactions($transactions);
 		return $t;
