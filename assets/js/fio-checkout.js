@@ -19,7 +19,7 @@
 
                 //Prepare NEM qr code data
                 // Invoice model for QR
-                this.paymentData = {
+                /* this.paymentData = {
                     "v": wc_fio_params.test ? 1 : 2,
                     "type": 2,
                     "data": {
@@ -28,10 +28,10 @@
                         "msg": this.fioRef,
                         "name": "FIO payment to " + wc_fio_params.store
                     }
-                };
+                }; */
                 //Generate the QR code with address
                 new QRCode("fio-qr", {
-                    text: JSON.stringify(this.paymentData),
+                    text: this.fioAddress.toUpperCase().replace(/-/g, ''),
                     size: 256,
                     fill: '#000',
                     quiet: 0,
@@ -124,7 +124,11 @@
 
     fioPayment.init();
     setTimeout(function() {
-        fioPayment.checkForFioPayment();
+        try {
+            fioPayment.checkForFioPayment();
+        } catch (e) {
+            console.log(e);
+        }
     }, 5000);
 
 })( jQuery );

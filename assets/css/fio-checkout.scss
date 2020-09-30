@@ -49,12 +49,27 @@
     display: block;
     margin-bottom: 5px;
 }
+#fio-payment-desc{
+    overflow: scroll;
+}
 .fio-label-for{
     font-weight: 400;
     font-size: 14px;
 }
 
 .fio-label{
+    max-width: 280px;
     float: right;
     font-size: 16px;
+}
+
+.alert-danger {
+    position: relative;
+    padding: .25rem .75rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
 }
