@@ -139,7 +139,7 @@ class WC_Fio_Ajax {
 
 			$whole = floor($t->amount * 100);
 			$dec = ($t->amount * 100) - $whole;
-			$ref = floor($dec * 100000) + 1;
+			$ref = round($dec * 100000);
 			//Check for matching decimals
 			if( strval($ref_id) === strval($ref) ){
 				$message_match = true;
